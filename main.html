@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
 
     <!-- STYLES -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -15,38 +19,381 @@
 </head>
 
 <body>
-
     <header>
-        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Site</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../main.html">Site</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="./main.html">Accueil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Boutique</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Inscription</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Connexion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./amdinConnexion.html">Administration</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./main.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carte">Carte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#horaires">Horaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./admin/connexion.html">Administration</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
 
+    <section class="accueil">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 home-title">
+                    <h1>Le resto</h1>
+                    <button class="btn btn-white btn-outline-white" id="btn-accueil">
+                        <a href="#carte">Plats du jour</a>
+                    </button>
+                </div>
+            </div>
+    </section>
+
+    <section class="carte" id="carte">
+        <div class="container">
+            <div class="row">
+                <div class="card-deck">
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="row d-flex justify-content-center">
+                                <div class="title">
+                                    <h2>La carte</h2>
+                                    <hr>
+                                </div>
+                            </div>
+
+                            <!-- ========= ENTREES ========= -->
+                            <div class="row">
+                                <div class="col-md-12 d-flex justify-content-center">
+                                    <div class="card-entree">
+                                        <h4>
+                                            <i class="fas fa-leaf"></i>
+                                            Les entrées
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/salade.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Salade</h4>
+                                            <p class="card-text">5€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/salade.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Salade</h4>
+                                            <p class="card-text">5€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/salade.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Salade</h4>
+                                            <p class="card-text">5€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ========= PLATS ========= -->
+                            <div class="row">
+                                <div class="col-md-12 d-flex justify-content-center">
+                                    <div class="card-entree">
+                                        <h4>
+                                            <i class="fas fa-hamburger"></i>
+                                            Les plats
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/pizza.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Pizza</h4>
+                                            <p class="card-text">7€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/burger2.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Burger</h4>
+                                            <p class="card-text">7€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/steak.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Steack</h4>
+                                            <p class="card-text">7€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ========= DESSERTS ========= -->
+                            <div class="row">
+                                <div class="card-deck"></div>
+                                <div class="col-md-12 d-flex justify-content-center">
+                                    <div class="card-entree">
+                                        <h4>
+                                            <i class="fas fa-ice-cream"></i>
+                                            Les desserts
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/ice-cream.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Glace</h4>
+                                            <p class="card-text">5€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/gateau1.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Gâteau</h4>
+                                            <p class="card-text">5€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-black bg-white">
+                                        <img class="card-img-top" src="/ressources/images/gateau2.jpg" alt="">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Gâteau</h4>
+                                            <p class="card-text">5€</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="horaires" id="horaires">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="title">
+                    <h2>Nos horaires</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2  d-flex justify-content-center">
+                    <div class="card-horaire">
+                        <h3>Mardi</h3>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            12:00 - 14:30
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            19:00 - 22:30
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2  d-flex justify-content-center">
+                    <div class="card-horaire">
+                        <h3>Mercredi</h3>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            12:00 - 14:30
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            19:00 - 22:30
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2  d-flex justify-content-center">
+                    <div class="card-horaire">
+                        <h3>Jeudi</h3>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            12:00 - 14:30
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            19:00 - 22:30
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2  d-flex justify-content-center">
+                    <div class="card-horaire">
+                        <h3>Vendredi</h3>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            12:00 - 14:30
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            19:00 - 22:30
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2  d-flex justify-content-center">
+                    <div class="card-horaire">
+                        <h3>Samedi</h3>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            12:00 - 14:30
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            19:00 - 22:30
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
+                    <div class="card-horaire">
+                        <h3>Dimanche</h3>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            12:00 - 14:30
+                        </p>
+                        <p>
+                            <i class="far fa-clock"></i>
+                            19:00 - 22:30
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center d-flex justify-content-center">
+                <div class="lundi">
+                    <small>
+                        Nous sommes fermés le lundi
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="title">
+                    <h2>Blog</h2>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="card-deck">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="./ressources/images/smoothie.jpg" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <span class="calendar d-flex">
+                                        <i class="fa fa-calendar-alt"></i>
+                                        <p>12/11/2020</p>
+                                    </span>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional
+                                        content. This content is a little bit longer.
+                                    </p>
+                                    <button class="btn">
+                                        Lire
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="./ressources/images/glace.jpg" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <span class="calendar d-flex">
+                                        <i class="fa fa-calendar-alt"></i>
+                                        <p>23/10/2020</p>
+                                    </span>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional
+                                        content. This content is a little bit longer.
+                                    </p>
+                                    <button class="btn">
+                                        Lire
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="form-group d-flex">
+                    <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId"
+                        placeholder="contact@leresto.fr">
+                    <button class="btn">
+                        S'inscrire
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        06 99 99 99 99
+                    </p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        contact@leresto.fr
+                    </p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <p>
+                        <i class="fas fa-map-marker"></i>
+                        1 rue du resto,
+                        85000 La Roche-Sur-Yon
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
