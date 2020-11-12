@@ -93,10 +93,17 @@ hr {
     border: rgb(44, 88, 124);
 }
 
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
 
 /* ========== ADMIN ========== */
 a {
     list-style: none;
+    color: steelblue;
 }
 
 #admin-content {
@@ -117,6 +124,19 @@ a {
 
 td, th {
     text-align: center;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: steelblue;
+}
+
+table i {
+    cursor: pointer;
+}
+
+.modal-dialog {
+    width: auto;
 }
 
 
@@ -162,12 +182,6 @@ td, th {
 .card-horaire {
     margin-bottom: 16px;
 }
-
-.horaires {
-    /* box-shadow: 2.5px 5px 2.5px rgb(235, 235, 235); */
-}
-
-
 
 
 /* ========== BLOG ========== */

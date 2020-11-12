@@ -10,6 +10,8 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+
     <link rel="stylesheet" href="../ressources/css/style.css" />
 
     <title>AdminPage</title>
@@ -45,19 +47,29 @@
 
     <section class="container-fluid" id="admin-content">
         <div class="row">
-            <div class="col-12 col-md-3 col-lg-3" id="admin-nav">
+            <div class="col-12 col-md-2 col-lg-2" id="admin-nav">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-page-tab" data-toggle="pill" href="#v-pills-page" role="tab"
-                        aria-controls="v-pills-page" aria-selected="true">Pages <i class="fas fa-file-alt"></i></a>
+                        aria-controls="v-pills-page" aria-selected="true">
+                        Pages
+                        <i class="fas fa-file-alt"></i>
+                    </a>
                     <a class="nav-link" id="v-pills-user-tab" data-toggle="pill" href="#v-pills-user" role="tab"
-                        aria-controls="v-pills-user" aria-selected="false">Newsletter <i class="fas fa-user"></i></a>
+                        aria-controls="v-pills-user" aria-selected="false">
+                        Newsletter
+                        <i class="fas fa-user"></i>
+                    </a>
                     <a class="nav-link" id="v-pills-produit-tab" data-toggle="pill" href="#v-pills-produit" role="tab"
-                        aria-controls="v-pills-produit" aria-selected="false">Carte <i class="fas fa-barcode"></i></a>
+                        aria-controls="v-pills-produit" aria-selected="false">
+                        Carte <i class="fas fa-barcode"></i>
+                    </a>
                     <a class="nav-link" id="v-pills-blog-tab" data-toggle="pill" href="#v-pills-blog" role="tab"
-                        aria-controls="v-pills-blog" aria-selected="false">Blog <i class="fas fa-comment-alt"></i></a>
+                        aria-controls="v-pills-blog" aria-selected="false">
+                        Blog <i class="fas fa-comment-alt"></i>
+                    </a>
                 </div>
             </div>
-            <div class="col-12 col-md-9 col-lg-9">
+            <div class="col-12 col-md-10 col-lg-10">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-page" role="tabpanel"
                         aria-labelledby="v-pills-page-tab">
@@ -72,7 +84,7 @@
                         <!-- Modal -->
                         <div class="modal fade" id="modalPage" tabindex="-1" aria-labelledby="pageModalLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="pageModalLabel">
@@ -87,6 +99,12 @@
                                             <label for="nomPage">Titre de la page</label>
                                             <input type="text" name="nomPage" id="nomPage" class="form-control">
                                         </div>
+                                        <div class="form-group">
+                                            <label>Texte</label>
+                                            <textarea name="editor1" class="form-control" placeholder="Page Body">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </textarea>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -100,70 +118,72 @@
                             </div>
                         </div>
 
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nom</th>
-                                    <th scope="col">Date de création</th>
-                                    <th scope="col">
-                                        Date de la dernière modification
-                                    </th>
-                                    <th scope="col">Auteur</th>
-                                    <th>Modifier</th>
-                                    <th>Supprimer</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">Accueil</td>
-                                    <td>01/09/2020</td>
-                                    <td>10/10/2020</td>
-                                    <td>Tom</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Blog</td>
-                                    <td>10/11/2020</td>
-                                    <td>10/11/2020</td>
-                                    <td>Mark</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Connexion</td>
-                                    <td>25/10/2020</td>
-                                    <td>10/11/2020</td>
-                                    <td>Lucie</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Date de création</th>
+                                        <th scope="col">
+                                            Date de la dernière modification
+                                        </th>
+                                        <th scope="col">Auteur</th>
+                                        <th>Modifier</th>
+                                        <th>Supprimer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Accueil</td>
+                                        <td>01/09/2020</td>
+                                        <td>10/10/2020</td>
+                                        <td>Tom</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Blog</td>
+                                        <td>10/11/2020</td>
+                                        <td>10/11/2020</td>
+                                        <td>Mark</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Connexion</td>
+                                        <td>25/10/2020</td>
+                                        <td>10/11/2020</td>
+                                        <td>Lucie</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
@@ -211,64 +231,66 @@
                             </div>
                         </div>
 
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nom</th>
-                                    <th scope="col">Date d'abonnement</th>
-                                    <th scope="col">Mail</th>
-                                    <th>Modifier</th>
-                                    <th>Supprimer</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">Tom</td>
-                                    <td>01/09/2020</td>
-                                    <td>tom@gmail.com</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Mark</td>
-                                    <td>10/11/2020</td>
-                                    <td>mark@live.fr</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Lucie</td>
-                                    <td>25/10/2020</td>
-                                    <td>lucie@gmail.com</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Date d'abonnement</th>
+                                        <th scope="col">Mail</th>
+                                        <th>Modifier</th>
+                                        <th>Supprimer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Tom</td>
+                                        <td>01/09/2020</td>
+                                        <td>tom@gmail.com</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Mark</td>
+                                        <td>10/11/2020</td>
+                                        <td>mark@live.fr</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Lucie</td>
+                                        <td>25/10/2020</td>
+                                        <td>lucie@gmail.com</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-produit" role="tabpanel"
@@ -324,64 +346,67 @@
                                 </div>
                             </div>
                         </div>
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <td scope="col">Nom</td>
-                                    <th scope="col">Date d'ajout à la carte</th>
-                                    <th scope="col">Prix</th>
-                                    <th>Modifier</th>
-                                    <th>Supprimer</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">Steack</td>
-                                    <td>01/09/2020</td>
-                                    <td>5€</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Spaghetti</td>
-                                    <td>10/11/2020</td>
-                                    <td>3€</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Pizza</td>
-                                    <td>25/10/2020</td>
-                                    <td>8€</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nom</th>
+                                        <th scope="col">Date d'ajout à la carte</th>
+                                        <th scope="col">Prix</th>
+                                        <th>Modifier</th>
+                                        <th>Supprimer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Steack</td>
+                                        <td>01/09/2020</td>
+                                        <td>5€</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Spaghetti</td>
+                                        <td>10/11/2020</td>
+                                        <td>3€</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Pizza</td>
+                                        <td>25/10/2020</td>
+                                        <td>8€</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
 
@@ -399,7 +424,7 @@
                         <!-- Modal -->
                         <div class="modal fade" id="modalArticle" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">
@@ -413,6 +438,12 @@
                                         <div class="form-group">
                                             <label for="nomArticle">Nom de l'article</label>
                                             <input type="text" name="nomArticle" id="nomArticle" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Texte</label>
+                                            <textarea name="editor2" class="form-control" placeholder="Page Body">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </textarea>
                                         </div>
                                         <div class="form-group">
                                             <label for="DateArticle">Date de parution programmée</label>
@@ -438,68 +469,70 @@
                             </div>
                         </div>
 
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nom de l'article</th>
-                                    <th scope="col">Auteur</th>
-                                    <th scope="col">Date de parution</th>
-                                    <th scope="col">Nombre de lectures</th>
-                                    <th>Modifier</th>
-                                    <th>Supprimer</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td scope="row">Recettes de l'hiver</td>
-                                    <td>Mark</td>
-                                    <td>Prévue le 21/12/2020</td>
-                                    <td>225</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Recettes de l'été</td>
-                                    <td>Jacob</td>
-                                    <td>22/07/2020</td>
-                                    <td>155</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Recettes du printemps</td>
-                                    <td>Larry the Bird</td>
-                                    <td>25/05/2020</td>
-                                    <td>20</td>
-                                    <td>
-                                        <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
-                                            title="Modifier">
-                                        </i>
-                                    </td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nom de l'article</th>
+                                        <th scope="col">Auteur</th>
+                                        <th scope="col">Date de parution</th>
+                                        <th scope="col">Nombre de lectures</th>
+                                        <th>Modifier</th>
+                                        <th>Supprimer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">Recettes de l'hiver</td>
+                                        <td>Mark</td>
+                                        <td>Prévue le 21/12/2020</td>
+                                        <td>225</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Recettes de l'été</td>
+                                        <td>Jacob</td>
+                                        <td>22/07/2020</td>
+                                        <td>155</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Recettes du printemps</td>
+                                        <td>Larry the Bird</td>
+                                        <td>25/05/2020</td>
+                                        <td>20</td>
+                                        <td>
+                                            <i class="fas fa-edit" data-toggle="tooltip" data-placement="top"
+                                                title="Modifier">
+                                            </i>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -514,5 +547,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
+
+<!-- TEXT EDITOR -->
+<script>
+    CKEDITOR.replace('editor1');
+    CKEDITOR.replace('editor2');
+</script>
 
 </html>
