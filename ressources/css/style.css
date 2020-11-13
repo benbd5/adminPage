@@ -99,6 +99,12 @@ hr {
     border-color: #dc3545;
 }
 
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
 
 /* ========== ADMIN ========== */
 a {
@@ -109,14 +115,6 @@ a {
 #admin-content {
     margin-top: 100px;
 }
-
-/* @media screen and (max-width: 768px) {
-    #admin-nav {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-} */
 
 #admin-nav {
     margin-top: 50px;
@@ -137,6 +135,17 @@ table i {
 
 .modal-dialog {
     width: auto;
+}
+
+/* CHART JS */
+.stats-title {
+    margin: 16px 0 20px 0;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+#myPieChart {
+    margin-top: 25px;
 }
 
 
