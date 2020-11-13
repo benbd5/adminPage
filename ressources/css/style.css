@@ -106,6 +106,17 @@ hr {
 }
 
 
+/* ========== CONNEXION ========== */
+.mdp {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+#connexion {
+    margin-bottom: 0;
+}
+
+
 /* ========== ADMIN ========== */
 a {
     list-style: none;
